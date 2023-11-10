@@ -202,6 +202,29 @@
             "problemMatcher": [
                 "$gcc"
             ]
+        },
+        {
+            "label": "Convert .inc to .pory",
+            "type": "shell",
+            "promptOnClose": true,
+            "windows": {
+                "options": {
+                    "shell": {
+                        "executable": "bash.exe",
+                        "args": [
+                            "-lc"
+                        ]
+                    }
+                }
+            },
+            "command": "cd .. && rm -rf poryscript-genporyscript && git clone https://github.com/IronTakaala/poryscript-genporyscript && cp poryscript-genporyscript/convert_inc.sh ${workspaceFolderBasename} && cd ./${workspaceFolderBasename} && bash convert_inc.sh",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
         }
     ]
 }
