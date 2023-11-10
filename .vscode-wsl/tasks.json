@@ -179,6 +179,29 @@
             ],
             "group": "test",
             "isBackground": true
+        },
+        {
+            "label": "Build and Install Poryscript",
+            "type": "shell",
+            "promptOnClose": true,
+            "windows": {
+                "options": {
+                    "shell": {
+                        "executable": "bash.exe",
+                        "args": [
+                            "-lc"
+                        ]
+                    }
+                }
+            },
+            "command": "cd .. && rm -rf poryscript && git clone https://github.com/huderlem/poryscript && cd poryscript && go build && ./install.sh ../${workspaceFolderBasename}",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
         }
     ]
 }
